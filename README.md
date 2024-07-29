@@ -19,3 +19,29 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
 </div>
+
+## Key Features
+* User Authentication: Implement user registration and login using JWT for authentication.
+* Real-Time Collaboration: Use WebSockets to allow multiple users to edit a document in real-time.
+* Document Management: CRUD operations for documents.
+* Event Loop and Async Programming: Handle I/O operations efficiently and use async/await for managing asynchronous tasks.
+* Error Handling: Robust error handling and logging.
+* Database Integration: Use MongoDB for storing user and document data.
+* Security: Implement basic security practices such as input validation, sanitization, and protection against common vulnerabilities (e.g., XSS, CSRF).
+
+
+# Project Screenshots & Details  
+<details>
+  <summary>Auth</summary>
+  <br>
+  <p>Description of the Auth screen.</p>
+</details>
+
+
+## Quick Links 
+###  [Prerequisites](#prerequisites)
+###  [Get Started](#get-started)
+###  [Tech Stack](#tech-stack)
+###  [Project Development Rules](#project-development-rules)
+###  [Features](#features)
+
