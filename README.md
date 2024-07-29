@@ -1,2 +1,2 @@
 # Google_Docs
-Real-time collaboration tool similar to Google Docs, where multiple users can edit the same document simultaneously.
+This project will demonstrate real-time updates using WebSockets, handle asynchronous operations, and structure the application using OOP principles where necessary.
