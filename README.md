@@ -64,36 +64,33 @@
 * allowing multiple users to edit the same document without conflicting changes -> (OT)
 * ensuring that simultaneous edits are effectively merged without causing issues -> Collaborative protocol
 
-# Technology Stack
 
+# 🛠️ Technology Stack
 
-## Frontend  
-#### * React.js
-#### * React-router.js
-#### * Tailwind CSS
-#### * quilljs
-#### * Shadcn 
-#### * TypeScript 
-#### * Vite 
+## 🌐 Frontend
+- **React.js**
+- **React-router.js**
+- **Tailwind CSS**
+- **Quill.js**
+- **Shadcn**
+- **TypeScript**
+- **Vite**
 
+## 🔧 Backend
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **WebSockets**
+- **JWT/OAuth**
+- **TypeScript**
+- **Docker**
 
-
-## Backend 
-#### * Node.js
-#### * Express.js
-#### * MongoDB
-#### * WebSockets 
-#### * JWT/OAuth
-#### * TypeScript 
-#### * Docker 
-
-
-## Infrastructure
-#### * cloudflare stack 
-#### * prometheus
-#### * CI/CD with GitHub Actions
-#### * Microservices Architecture: scalability and maintainability.
-#### * API Gateway (NGINX): To manage and route microservices.
-#### * Nginx for Reverse Proxy: To handle IP address management and routing on Cloudflare.
-#### * API Documentation (Swagger): For documenting RESTful APIs.
-#### * Component Documentation (Storybook): For documenting and showcasing frontend components.
+## ☁️ Infrastructure
+- **Cloudflare Stack**
+- **Prometheus**
+- **CI/CD with GitHub Actions**
+- **Microservices Architecture:** Scalability and maintainability
+- **API Gateway (NGINX):** To manage and route microservices
+- **Nginx for Reverse Proxy:** To handle IP address management and routing on Cloudflare
+- **API Documentation (Swagger):** For documenting RESTful APIs
+- **Component Documentation (Storybook):** For documenting and showcasing frontend components
