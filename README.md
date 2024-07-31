@@ -2,6 +2,7 @@
   <div>
     <h1>📄 Google_Docs</h1>
     <p>
+    Collaborative document editing platform
     This project will demonstrate real-time updates using WebSockets, handle asynchronous operations,
     and structure the application using OOP principles where necessary.
     </p>
@@ -45,3 +46,54 @@
 ###  [Project Development Rules](#project-development-rules)
 ###  [Features](#features)
 
+## Key Requirements
+* File Organization
+* online editing 
+* Collaboration (real-time)
+* Sharing and permissions
+
+## Hight Level Design 
+* Storage and Formatting
+* Concurrency -> collaborative editing: (CRDTs) and (OT) algorithms
+* Access Control -> (RBAC)
+* authentication and authorization
+* CRUD 
+* Monitoring and Observability -> metrics, logs, and trace data 
+
+## Challenges 
+* allowing multiple users to edit the same document without conflicting changes -> (OT)
+* ensuring that simultaneous edits are effectively merged without causing issues -> Collaborative protocol
+
+# Technology Stack
+
+
+## Frontend  
+#### * React.js
+#### * React-router.js
+#### * Tailwind CSS
+#### * quilljs
+#### * Shadcn 
+#### * TypeScript 
+#### * Vite 
+
+
+
+## Backend 
+#### * Node.js
+#### * Express.js
+#### * MongoDB
+#### * WebSockets 
+#### * JWT/OAuth
+#### * TypeScript 
+#### * Docker 
+
+
+## Infrastructure
+#### * cloudflare stack 
+#### * prometheus
+#### * CI/CD with GitHub Actions
+#### * Microservices Architecture: scalability and maintainability.
+#### * API Gateway (NGINX): To manage and route microservices.
+#### * Nginx for Reverse Proxy: To handle IP address management and routing on Cloudflare.
+#### * API Documentation (Swagger): For documenting RESTful APIs.
+#### * Component Documentation (Storybook): For documenting and showcasing frontend components.
