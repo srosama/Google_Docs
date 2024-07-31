@@ -1,4 +1,4 @@
-<div align="center">
+<div text-align="center">
   <div>
     <h1>📄 Google_Docs</h1>
     <p>
@@ -52,6 +52,17 @@
 * Collaboration (real-time)
 * Sharing and permissions
 
+## Sync Strategies 
+* Event Parsing -> (OT)
+  - Operations ->   
+    INSERT(char, position) like (A, 1)
+    DELETE(char, position)
+    UPDATE(char,  new char, position)
+    RETAIN(char, position)
+    is the basic operation. But there can be numerous operations in Google Docs. Change font, color, font family, font size, etc...
+
+* Differentail synchronisation
+
 ## Hight Level Design 
 * Storage and Formatting
 * Concurrency -> collaborative editing: (CRDTs) and (OT) algorithms
@@ -65,7 +76,17 @@
 * ensuring that simultaneous edits are effectively merged without causing issues -> Collaborative protocol
 
 
-# 🛠️ Technology Stack
+## Design Constraint
+* Concurrency: A lot of people are working on the same document
+* Latency: People are working in different places and they connect throughout the internet, so there is a latency between each and every know clients or users when they are sharing the same document.
+
+* Google Docs users get a lot of storage space with their accounts, but it's not unlimited. Each account can have up to:
+    - 5,000 documents of up to 500 kilobytes each
+    - 1,000 spreadsheets of up to 1 megabyte each
+    - 5,000 presentations of up to 10 megabytes each
+
+
+# 🛠️ Technology Stack (#tech-stack)
 
 ## 🌐 Frontend
 - **React.js**
