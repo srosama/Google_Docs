@@ -1,4 +1,4 @@
-<div text-align="center">
+<div align="center">
   <div>
     <h1>📄 Google_Docs</h1>
     <p>
