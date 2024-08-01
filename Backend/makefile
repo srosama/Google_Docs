@@ -3,15 +3,14 @@ SRC_DIR := ./src
 DIST_DIR := ./dist
 
 
-build: $(NODE_MODULES)
-	npm run build
+
 
 # Start the production server
-start: $(NODE_MODULES)
-	npm start
+# start: $(NODE_MODULES)
+# 	npm start
 
 # Run in development mode
-dev: build
+dev:
 	npm run dev
 
 clean:
