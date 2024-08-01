@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const authRoutes = require('./src/routes/authRoutes');
 const dashboardRoutes = require('./src/routes/dashboardRoutes');
 const documentRoutes = require('./src/routes/documentRoutes');
+const colors = require('colors');
 
 dotenv.config();
 
@@ -18,9 +19,20 @@ const app = express();
 const port = process.env.PORT || 3000; // Default port if environment variable is not set
 
 // Connect to MongoDB
-mongoose.connect(process.env.CONNECTMONGO, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error('MongoDB connection error:', err));
+async function connectToMongoDB() {
+  try {
+    await mongoose.connect(process.env.CONNECTMONGO);
+    console.log(`MongoDB connected at ${mongoose.connection.host}`.bgGreen.white);
+  } catch (err) {
+    console.error('MongoDB connection error:', err.message);
+    console.error('Stack trace:', err.stack);
+    process.exit(1);
+  }
+}
+
+
+connectToMongoDB();
+
 
 // Middleware
 app.use(cors());

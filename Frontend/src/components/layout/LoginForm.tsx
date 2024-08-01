@@ -10,6 +10,7 @@ import { blueLakeBg, hideIcon, viewIcon } from "@/utils";
 import OpenId from "./OpenId";
 import OrComponent from "../ui/or";
 import usePasswordToggle from "@/hooks/usePasswordToggle";
+import { useAuth } from "@/context/AuthContext";
 
 const formSchema = z.object({
     password: z
@@ -31,7 +32,7 @@ export default function LoginForm() {
     const mainForm = useRef<HTMLDivElement>(null);
     const [loading, setLoading] = useState(false);
     const { inputType, Icon, toggleVisibility } = usePasswordToggle();
-
+    const { login } = useAuth();
     const form = useForm<FormValues>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -41,13 +42,16 @@ export default function LoginForm() {
     });
 
     const onSubmit = async (values: FormValues) => {
-        console.log(values);
-        // Simulate form submission
-        setLoading(true);
-        // After submitting, reset the form
-        form.reset();
-        setLoading(false);
-    }
+        try {
+            setLoading(true);
+            await login(values.email, values.password);
+            alert("Goode")
+        }
+        catch (err) {
+            alert(err);
+            console.log("Failed Osama...")
+        }
+    };
 
 
 
